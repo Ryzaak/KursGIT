@@ -23,22 +23,6 @@
             <li><a href="/workshop">Workshop icon</a></li>
             <li><a href="/contact">Contact icon</a></li>
             <li><a href="/team">Team</a></li>
-/*************  ✨ Codeium Command 🌟  *************/
         </nav>
-        <script>
-            document.querySelector('form').addEventListener('submit', function(event) {
-                const name = document.getElementById('name').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const message = document.getElementById('message').value.trim();
-                if (!name || !email || !message) {
-                    alert('Please fill out all fields.');
-                    event.preventDefault();
-                } else if (!/\S+@\S+\.\S+/.test(email)) {
-                    alert('Please enter a valid email address.');
-                    event.preventDefault();
-                }
-            });
-        </script>
-/******  c895b195-7221-43a7-88b5-054a0dae050a  *******/
     </body>
 </html>
