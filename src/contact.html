@@ -1,4 +1,22 @@
 <!DOCTYPE html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    nav {
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    nav a:hover {
+        background-color: #555;
+    }
+</style>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -24,5 +42,19 @@
             <li><a href="/contact">Contact icon</a></li>
             <li><a href="/team">Team</a></li>
         </nav>
+        <script>
+            document.querySelector('form').addEventListener('submit', function(event) {
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+                if (!name || !email || !message) {
+                    alert('Please fill out all fields.');
+                    event.preventDefault();
+                } else if (!/\S+@\S+\.\S+/.test(email)) {
+                    alert('Please enter a valid email address.');
+                    event.preventDefault();
+                }
+            });
+        </script>
     </body>
 </html>
